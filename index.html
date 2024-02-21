@@ -7,14 +7,19 @@
 <html>
 
 <head>
-	<title>AA接盤季2024會場</title>
+	<title>AA接盤祭2024會場</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta property="og:title" content="AA接盤祭2024會場" />
+	<meta property="og:description" content="大家一起追殺FLA" />
+	<meta property="og:url" content="https://aafanclubdc.github.io/" />
+	<meta property="og:image" content="https://aafanclubdc.github.io/main.png" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src="assets/js/loadMetaData.js"></script>
 </head>
 
 <body class="is-preload">
-
+	<!-- <script>loadImgData();</script> -->
 	<!-- Content -->
 	<div id="content">
 		<div class="inner">
@@ -22,28 +27,12 @@
 			<!-- Post -->
 			<article class="box post post-excerpt">
 				<header>
-					<!--
-									Note: Titles and subtitles will wrap automatically when necessary, so don't worry
-									if they get too long. You can also remove the <p> entirely if you don't
-									need a subtitle.
-								-->
 					<h2><a href="#">AA接盤祭2024－甲乙方接力創作</a></h2>
 					<p>報名群友承接其他參加者發佈的故事設定來續寫AA作品</p>
 				</header>
 				<div class="info">
-					<!--
-									Note: The date should be formatted exactly as it's shown below. In particular, the
-									"least significant" characters of the month should be encapsulated in a <span>
-									element to denote what gets dropped in 1200px mode (eg. the "uary" in "January").
-									Oh, and if you don't need a date for a particular page or post you can simply delete
-									the entire "date" element.
-
-								-->
 					<span class="date"><span class="month">Jul<span>y</span></span> <span class="day">14</span><span
 							class="year">, 2014</span></span>
-					<!--
-									Note: You can change the number of list items in "stats" to whatever you want.
-								-->
 					<ul class="stats">
 						<li><a href="#" class="icon fa-comment">16</a></li>
 						<li><a href="#" class="icon fa-heart">32</a></li>
@@ -100,21 +89,44 @@
 					甲方賞：由甲方選擇寫自己委託作品中前三名，5/3/1<br>
 					評委評分：1~5分 ×3<br>
 				</p>
-			</article>
+				<p>
+					<strong>額外獎項</strong><br>
+					<strong>有希獎</strong><br>
+					　符合委託項目非0分、且佳作票數最高者可獲得Steam卡（150台幣）<br>
 
-			<!-- Pagination -->
-			<div class="pagination">
-				<!--<a href="#" class="button previous">Previous Page</a>-->
-				<div class="pages">
-					<a href="#" class="active">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<span>&hellip;</span>
-					<a href="#">20</a>
+					<strong>番王獎</strong><br>
+					　選擇寫作次數最多、且至少3人的甲方可獲得Steam卡（150台幣）<br>
+				</p>
+			</article>
+			<article class="box post post-excerpt">
+				<header>
+					<h2><a href="#">技術支援公告</a></h2>
+					<p>繳交格式說明</p>
+				</header>
+				<div class="info">
+					<span class="date"><span class="month">Jul<span>y</span></span> <span class="day">8</span><span
+							class="year">, 2014</span></span>
+					<ul class="stats">
+						<li><a href="#" class="icon fa-comment">16</a></li>
+						<li><a href="#" class="icon fa-heart">32</a></li>
+						<li><a href="#" class="icon brands fa-twitter">64</a></li>
+						<li><a href="#" class="icon brands fa-facebook-f">128</a></li>
+					</ul>
 				</div>
-				<a href="#" class="button next">Next Page</a>
-			</div>
+				<!-- <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a> -->
+				<p>
+					本次活動接受數種繳交格式，請閱讀以下條款確保繳交形式正確，如果格式錯誤大會方有權利打回直到格式正確<br>
+					1. 繳交檔案為"圖片檔"、"網頁檔"、"影片檔"三種形式為主，不可混合(如繳交三張圖片加一部影片)，
+					繳交網頁檔時請確保該檔案在其他設備(電腦、手機)上顯示正常<br>
+					2. "網頁檔"、"影片檔"以一個檔案為限<br>
+					3. "圖片檔"需要確保所有檔案的副檔名一致，可以為png,jpg,jpeg,bmp...等圖片格式，
+					但不接受gif檔案，gif檔案視同影片檔只可以繳交一個<br>
+					4. 繳交"圖片檔"檔案命名需要依照圖片順序命名為001,002,...，確保每一個檔案名稱都為三位數字<br>
+					5. 整份作品繳交時需要以一個命名為`<作品名>`的資料夾包裝壓縮打包為一個壓縮檔<br>
+						壓縮檔命名需要符合以下格式 <strong>`<對應甲方編號(個位數請補0)>_<作者編號(個位數請補0)>`</strong> '<strong>
+							<< /strong>'與'<strong>></strong>'請不要保留
+				</p>
+			</article>
 
 		</div>
 	</div>
@@ -123,12 +135,13 @@
 	<div id="sidebar">
 
 		<!-- Logo -->
-		<h1 id="logo"><a href="#">AA接盤季</a></h1>
+		<h1 id="logo"><a href="#">AA接盤祭</a></h1>
 
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li class="current"><a href="#">首頁</a></li>
+				<li class="current"><a onClick="window.location.reload();">首頁</a></li>
+				<li><a onclick=loadData()>測試用</a></li>
 				<li><a href="#">死是種體驗，死而復生是種常識</a></li>
 				<li><a href="#">偽娘聖杯戰爭</a></li>
 				<li><a href="#">fla迷宫</a></li>
