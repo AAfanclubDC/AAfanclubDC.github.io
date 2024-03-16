@@ -36,7 +36,7 @@ function generateButton(src, title) {
     return button;
 }
 
-function generatePartyB() {
+function generatePartyB(PartyA) {
     var article = document.createElement('article');
     article.id = "PartyB";
     article.className = 'box post post-excerpt';
@@ -48,11 +48,24 @@ function generatePartyB() {
     h2.appendChild(aTitle);
     header.appendChild(h2);
     article.appendChild(header);
-
-    src = "images/players/"+ "02"+ ".png"
-    article.appendChild(generateButton(src,
-    "AAAAA",));
-    article.appendChild(generateButton(src,
-        "AAAAAAAAAAAAAAAAAA",));
-    document.getElementById('content').appendChild(article);
-}
+    console.log(":產生按鈕");
+    // 加載 JSON 檔案
+    fetch('data/繳交情況.json') // 假設您的 JSON 文件位於 data 目錄下
+        .then(response => response.json())
+        .then(data => {
+            // 處理每一筆資料
+            console.log("2");
+            data.forEach(player => {
+                if(player.PartyA !=PartyA){
+                    console.log("3");
+                    return;
+                }
+                const src = "images/players/" + player.PartyB + ".png";
+                const button = generateButton(src, player.Title);
+                console.log("產生按鈕");
+                article.appendChild(button);
+            });
+            document.getElementById('content').appendChild(article);
+        })
+        .catch(error => console.error('Error loading the JSON file:', error));
+    }
