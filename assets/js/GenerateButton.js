@@ -48,21 +48,17 @@ function generatePartyB(PartyA) {
     h2.appendChild(aTitle);
     header.appendChild(h2);
     article.appendChild(header);
-    console.log(":產生按鈕");
     // 加載 JSON 檔案
     fetch('data/繳交情況.json') // 假設您的 JSON 文件位於 data 目錄下
         .then(response => response.json())
         .then(data => {
             // 處理每一筆資料
-            console.log("2");
             data.forEach(player => {
                 if(player.PartyA !=PartyA){
-                    console.log("3");
                     return;
                 }
                 const src = "images/players/" + player.PartyB + ".png";
                 const button = generateButton(src, player.Title);
-                console.log("產生按鈕");
                 article.appendChild(button);
             });
             document.getElementById('content').appendChild(article);
