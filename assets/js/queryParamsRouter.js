@@ -51,7 +51,7 @@ async function route() {
             text.innerHTML = data.content.replace(/\n/g, '<br>');
             article.appendChild(text);
             document.getElementById('content').appendChild(article);
-            generatePartyB(page);
+            generatePartyB(PartyA);
             // 在這裡處理 content
         } catch (error) {
             console.error("Error:", error);
@@ -59,7 +59,7 @@ async function route() {
     } else
     {
         console.log("--------------");
-        loadData(page,PartyB);
+        loadData(PartyA,PartyB);
     }
 
 }
