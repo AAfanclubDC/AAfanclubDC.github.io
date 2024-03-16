@@ -26,6 +26,10 @@ function loadEntrust(key) {
 async function route() {
     const app = document.getElementById('content');
     let page = getQueryParam('PartyA'); // 獲取名為 'page' 的查詢參數
+    if (!page) {
+        displayDefaultContent();
+        return; // 結束函數執行
+    }
     try {
         const data = await loadEntrust(page);
         removeAllChildren();
