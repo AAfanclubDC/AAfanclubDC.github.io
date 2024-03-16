@@ -25,35 +25,41 @@ function loadEntrust(key) {
 
 async function route() {
     const app = document.getElementById('content');
-    let page = getQueryParam('PartyA'); // 獲取名為 'page' 的查詢參數
-    if (!page) {
+    let PartyA = getQueryParam('PartyA');
+    let PartyB = getQueryParam('PartyB');
+    if (!PartyA) {
         displayDefaultContent();
         return; // 結束函數執行
-    }
-    try {
-        const data = await loadEntrust(page);
-        removeAllChildren();
-        // 創建article元素
-        const article = document.createElement('article');
-        article.className = 'box post post-excerpt';
+    } if (!PartyB) {
+        try {
+            const data = await loadEntrust(PartyA);
+            removeAllChildren();
+            // 創建article元素
+            const article = document.createElement('article');
+            article.className = 'box post post-excerpt';
 
-        // 創建header並設置標題
-        const header = document.createElement('header');
-        const h2 = document.createElement('h2');
-        const aTitle = document.createElement('a');
-        aTitle.textContent = data['標題'];
-        h2.appendChild(aTitle);
-        header.appendChild(h2);
-        article.appendChild(header);
+            // 創建header並設置標題
+            const header = document.createElement('header');
+            const h2 = document.createElement('h2');
+            const aTitle = document.createElement('a');
+            aTitle.textContent = data['標題'];
+            h2.appendChild(aTitle);
+            header.appendChild(h2);
+            article.appendChild(header);
 
-        const text = document.createElement('p');
-        text.innerHTML = data.content.replace(/\n/g, '<br>');
-        article.appendChild(text);
-        document.getElementById('content').appendChild(article);
-        generatePartyB(page);
-        // 在這裡處理 content
-    } catch (error) {
-        console.error("Error:", error);
+            const text = document.createElement('p');
+            text.innerHTML = data.content.replace(/\n/g, '<br>');
+            article.appendChild(text);
+            document.getElementById('content').appendChild(article);
+            generatePartyB(page);
+            // 在這裡處理 content
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    } else
+    {
+        console.log("--------------");
+        loadData(page,PartyB);
     }
 
 }
