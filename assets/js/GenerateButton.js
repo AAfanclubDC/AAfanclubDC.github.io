@@ -58,10 +58,10 @@ function generatePartyB(PartyA) {
                     return;
                 }
                 const src = "images/players/" + player.PartyB + ".png";
-                if(data.style == "圖片")
+                if(player.style == "圖片")
                 {
                     url = "/index.html?PartyA=" + player.PartyA + "&PartyB="+ player.PartyB ; // 
-                }else
+                }else if(player.style == "網頁")
                 {
                     url = "/pieces/"+ player.Title + ".html" ; 
                 }
