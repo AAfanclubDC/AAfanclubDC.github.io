@@ -6,10 +6,10 @@ function getRandomColor() {
     }
     return color;
 }
-function generateButton(src, title) {
+function generateButton(src, title , url) {
     var button = document.createElement('button');
     button.style.backgroundColor = getRandomColor();
-
+    button.onclick = function() { window.location.href = url; };
     var container = document.createElement('div');
     container.className = 'container';
 
@@ -58,7 +58,14 @@ function generatePartyB(PartyA) {
                     return;
                 }
                 const src = "images/players/" + player.PartyB + ".png";
-                const button = generateButton(src, player.Title);
+                if(player.style == "圖片")
+                {
+                    url = "/index.html?PartyA=" + player.PartyA + "&PartyB="+ player.PartyB ; // 
+                }else if(player.style == "網頁")
+                {
+                    url = "/pieces/"+ player.Title + ".html" ; 
+                }
+                const button = generateButton(src, player.Title, url);
                 article.appendChild(button);
             });
             document.getElementById('content').appendChild(article);
