@@ -29,7 +29,7 @@ function loadImgData(title,extension,page) {
         const aImage = document.createElement('a');
         aImage.className = 'image featured';
         const img = document.createElement('img');
-        img.src = `pieces/${title}/${i.toString().padStart(2, '0')}.${extension}`; // 生成 "01.png", "02.png", 等的路徑
+        img.src = `pieces/${title}/${i.toString().padStart(3, '0')}.${extension}`;
         img.alt = '';
         aImage.appendChild(img);
         article.appendChild(aImage);
@@ -58,8 +58,8 @@ function loadData(PartyA, PartyB) {
       }
       if (foundItem['style'] === "圖片") {
         console.log("圖片");
-        window.location.href = '/';
-        // loadImgData(foundItem["Title"],foundItem["ext"],5);
+        // window.location.href = '/';
+        loadImgData(foundItem["Title"],foundItem["ext"],foundItem['Page']);
         // loadImgData("第一回","png",5);
       } else if (foundItem['style'] === "網頁") {
         console.log("網頁");
