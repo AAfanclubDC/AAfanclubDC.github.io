@@ -5,7 +5,7 @@
         "PartyA": 3,
         "Title": "UNINGAN",
         "style": "圖片",
-        "ext": "zip",
+        "ext": "jpg",
         "Page": 36
     },
     {
@@ -84,10 +84,10 @@
         "Time": "2024-03-03 18:09:51",
         "PartyB": 4,
         "PartyA": 8,
-        "Title": "第十六话：矛盾",
+        "Title": "不透光的淤泥爱【04】",
         "style": "圖片",
-        "ext": "rar\/png",
-        "Page": 0
+        "ext": "png",
+        "Page": 7
     },
     {
         "Time": "2024-03-14 22:58:39",
@@ -284,7 +284,7 @@
         "PartyA": 18,
         "Title": "琪露诺的完美犯罪教室",
         "style": "網頁",
-        "ext": "zip",
+        "ext": "html",
         "Page": 0
     },
     {
