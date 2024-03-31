@@ -17,8 +17,8 @@ function loadImgData(title, extension, page, dateStr) {
   infoDiv.className = 'info';
   let date = new Date(dateStr);
   let year = date.getFullYear();
-  let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", 
-                "Sep", "Oct", "Nov", "Dec"];
+  let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
+    "Sep", "Oct", "Nov", "Dec"];
   let month = months[date.getMonth()];
   let day = date.getDate();
   infoDiv.innerHTML = `
@@ -37,6 +37,10 @@ function loadImgData(title, extension, page, dateStr) {
     const img = document.createElement('img');
     img.src = `pieces/${title}/${i.toString().padStart(3, '0')}.${extension}`;
     img.alt = '';
+    img.style.display = 'block';
+    img.style.maxWidth = '800px';
+    img.style.height = 'auto';
+    img.style.width = '100%';
     aImage.appendChild(img);
     article.appendChild(aImage);
   }
