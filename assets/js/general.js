@@ -85,3 +85,11 @@ function loadImgData(title, extension, page, dateStr) {
     }
     document.getElementById('content').appendChild(article);
   }
+
+//移除content全部物件
+  function removeAllChildren() {
+    var contentElement = document.getElementById('content');
+    while (contentElement.firstChild) {
+      contentElement.removeChild(contentElement.firstChild);
+    }
+  }
