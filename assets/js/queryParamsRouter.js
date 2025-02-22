@@ -5,7 +5,7 @@ function getQueryParam(param) {
 }
 
 function loadEntrust(key) {
-    return fetch('\\data\\委託單.json') // 確保返回承諾
+    return fetch('data\\委託單.json') // 確保返回承諾
         .then(response => response.json())
         .then(data => {
             if (data.hasOwnProperty(key)) {
