@@ -1,5 +1,5 @@
 function loadTitleInfo() {
-    fetch('\\data\\委託單.json')
+    fetch('data\\委託單.json')
         .then(response => response.json())
         .then(data => {
             const nav = document.getElementById('nav'); // 获取nav元素
