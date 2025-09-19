@@ -25,8 +25,10 @@ function generateButton(src, title , url) {
     var textDiv = document.createElement('div');
     textDiv.className = 'text';
 
-    var p = document.createElement('p');
-    p.textContent = title;
+    var p = document.createElement('p'); 
+    p.textContent = title; 
+    p.style.color = "white"; 
+    p.style.textShadow = "-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black";
     textDiv.appendChild(p);
 
     container.appendChild(imageDiv);
